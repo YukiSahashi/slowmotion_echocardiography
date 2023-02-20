@@ -5,45 +5,43 @@ As you might know, ischemic heart disease remains a major cause of mortality wor
 
 Stress echocardiography is applied to evaluate the presence of myocardial ischemia or the severity of valvular disease using some drugs or during exercise. However, diagnostic accuracy depends on the physicians’ experience and image quality due to its high-rate image. We assume that the optimization of video frame rate with the same image quality might contribute to improved evaluation of echocardiography in a difficult setting including evaluation for patients with very fast heart rate. 
 
+Reference:  
 
-EchoNet-Dynamic:<br/>Interpretable AI for beat-to-beat cardiac function assessment
+**Super-SloMo** [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+PyTorch implementation of "Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation" by Jiang H., Sun D., Jampani V., Yang M., Learned-Miller E. and Kautz J. [[Project]](https://people.cs.umass.edu/~hzjiang/projects/superslomo/) [[Paper]](https://arxiv.org/abs/1712.00080)
+
+
+Slow-motion Echocardiography:<br/>Arbitrary time interpolation using echocardiographic images
 ------------------------------------------------------------------------------
+For details, see the accompanying paper (medRxiv),
 
-EchoNet-Dynamic is a end-to-end beat-to-beat deep learning model for
-  1) semantic segmentation of the left ventricle
-  2) prediction of ejection fraction by entire video or subsampled clips, and
-  3) assessment of cardiomyopathy with reduced ejection fraction.
-
-For more details, see the accompanying paper,
-
-> [**Video-based AI for beat-to-beat assessment of cardiac function**](https://www.nature.com/articles/s41586-020-2145-8)<br/>
+> [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
   David Ouyang, Bryan He, Amirata Ghorbani, Neal Yuan, Joseph Ebinger, Curt P. Langlotz, Paul A. Heidenreich, Robert A. Harrington, David H. Liang, Euan A. Ashley, and James Y. Zou. <b>Nature</b>, March 25, 2020. https://doi.org/10.1038/s41586-020-2145-8
+
 
 Dataset
 -------
-We share a deidentified set of 10,030 echocardiogram images which were used for training EchoNet-Dynamic.
-Preprocessing of these images, including deidentification and conversion from DICOM format to AVI format videos, were performed with OpenCV and pydicom. Additional information is at https://echonet.github.io/dynamic/. These deidentified images are shared with a non-commerical data use agreement.
+In this paper, all echocardiographic data were acquired using GE ultrasound equipment (see paper).
+We are very sorry that data are not shared for privacy purposes. Please put your DICOM format echocardiographic data in XXX.
+More than 500 echocardiographic video data obtained from about 100 patients were trained into this paper.
+The authors used a GPU (GeForce Titan, 24GB) for training and inference.
 
-Examples
---------
+## Prerequisites
+This codebase was developed and tested with pytorch XX and CUDA XX and Python 3.6.
 
-We show examples of our semantic segmentation for nine distinct patients below.
-Three patients have normal cardiac function, three have low ejection fractions, and three have arrhythmia.
-No human tracings for these patients were used by EchoNet-Dynamic.
+Install:
+* [PyTorch](https://pytorch.org/get-started/previous-versions/)
 
-| Normal                                 | Low Ejection Fraction                  | Arrhythmia                             |
-| ------                                 | ---------------------                  | ----------                             |
-| ![](docs/media/0X10A28877E97DF540.gif) | ![](docs/media/0X129133A90A61A59D.gif) | ![](docs/media/0X132C1E8DBB715D1D.gif) |
-| ![](docs/media/0X1167650B8BEFF863.gif) | ![](docs/media/0X13CE2039E2D706A.gif ) | ![](docs/media/0X18BA5512BE5D6FFA.gif) |
-| ![](docs/media/0X148FFCBF4D0C398F.gif) | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
+For GPU, run
+```bash
+conda install pytorch=0.4.1 cuda92 torchvision==0.2.0 -c pytorch
+```
 
-Installation
-------------
-
-First, clone this repository and enter the directory by running:
-
-    git clone https://github.com/echonet/dynamic.git
-    cd dynamic
+* [TensorboardX](https://github.com/lanpa/tensorboardX) for training visualization
+* [tensorflow](https://www.tensorflow.org/install/) for tensorboard
+* [matplotlib](https://matplotlib.org/users/installing.html) for training graph in notebook.
+* [tqdm](https://pypi.org/project/tqdm/) for progress bar in [video_to_slomo.py](video_to_slomo.py)
+* [numpy](https://scipy.org/install.html)
 
 EchoNet-Dynamic is implemented for Python 3, and depends on the following packages:
   - NumPy
@@ -53,6 +51,29 @@ EchoNet-Dynamic is implemented for Python 3, and depends on the following packag
   - skimage
   - sklearn
   - tqdm
+
+
+Examples
+--------
+We show examples of our slow-motion echocardiography for nine(XXX) distinct patients below.
+One subject has normal cardiac function, another has a regional wall motion abnormalities.
+No human tracings for these patients were used by EchoNet-Dynamic.
+
+| Time speed                                 | Normal                  | Regional wall motion abnormalities                            |
+| ------                                 | ---------------------                  | ----------                             |
+| Original | ![](docs/media/0X129133A90A61A59D.gif) | ![](docs/media/0X132C1E8DBB715D1D.gif) |
+| 0.5x | ![](docs/media/0X13CE2039E2D706A.gif ) | ![](docs/media/0X18BA5512BE5D6FFA.gif) |
+| 0.25x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
+| 0.125x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
+
+Installation
+------------
+
+First, clone this repository and enter the directory by running:
+
+    git clone https://github.com/echonet/dynamic.git
+    cd dynamic
+
 
 Echonet-Dynamic and its dependencies can be installed by navigating to the cloned directory and running
 
