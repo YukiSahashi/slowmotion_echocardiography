@@ -17,8 +17,7 @@ The project members sincerely appreciate the previous work (Super-Slomo) by NVID
 
 Slow-motion Echocardiography:<br/>Arbitrary time interpolation using echocardiographic images
 ------------------------------------------------------------------------------
-For details, see the accompanying paper (medRxiv),
-
+For details, see the accompanying paper.
 > [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
  (Submitted as of May 2023）Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
 
