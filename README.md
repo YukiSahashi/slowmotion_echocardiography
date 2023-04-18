@@ -17,11 +17,15 @@ The project members sincerely appreciate the previous work (Super-Slomo) by NVID
 
 Slow-motion Echocardiography:<br/>Arbitrary time interpolation using echocardiographic images
 ------------------------------------------------------------------------------
-For details, see the accompanying paper.
-> [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
- (Submitted as of May 2023）Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
+For details, see the accompanying paper.<br/>
 
-Authors and affiliations: Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihara PhD, Ayako Sekine, Daichi Watanabe, Takeshi Ishihara MD, Hajime Ichiryu MD, Susumu Endo, Daisuke Fukuoka PhD, Takeshi Hara Ph, Hiroyuki Okura MD PhD, 
+ (Submitted as of May 2023）<br/>
+ Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
+> [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
+
+
+Authors: <br/>
+Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihara PhD, Ayako Sekine, Daichi Watanabe, Takeshi Ishihara MD, Hajime Ichiryu MD, Susumu Endo, Daisuke Fukuoka PhD, Takeshi Hara Ph, Hiroyuki Okura MD PhD, 
 
 Dataset
 -------
