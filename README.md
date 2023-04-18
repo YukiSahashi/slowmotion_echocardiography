@@ -5,8 +5,7 @@ As you know, ischemic heart disease remains a major cause of mortality worldwide
 
 Stress echocardiography is applied to evaluate the presence of myocardial ischemia or the severity of valvular disease using some drugs or during exercise. However, diagnostic accuracy depends on the physicians’ experience and image quality due to its high-rate image. We assume that the optimization of video frame rate with the same image quality might contribute to improved evaluation of echocardiography in a difficult setting including evaluation for patients with very fast heart rate. 
 
-Reference:  
-**Super-SloMo** (https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+Reference:  **Super-SloMo** (https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 PyTorch implementation of "Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation" by Jiang H., Sun D., Jampani V., Yang M., Learned-Miller E. and Kautz J. [[Project]](https://people.cs.umass.edu/~hzjiang/projects/superslomo/) [[Paper]](https://arxiv.org/abs/1712.00080)
 
 ![SuperSlomo_NVIDIA_paper](https://user-images.githubusercontent.com/58348086/231926369-7d347036-fcd0-49e0-ab11-3eb6ce0e456a.png)
@@ -25,25 +24,17 @@ For details, see the accompanying paper (medRxiv),
 
 Authors and affiliations: Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihara PhD, Ayako Sekine, Daichi Watanabe, Takeshi Ishihara MD, Hajime Ichiryu MD, Susumu Endo, Daisuke Fukuoka PhD, Takeshi Hara Ph, Hiroyuki Okura MD PhD, 
 
-
-
 Dataset
 -------
-In this paper, all echocardiographic data were acquired using GE ultrasound equipment.
-We are very sorry that data are not shared for privacy purposes. Please put your DICOM format echocardiographic data in XXX.
-More than 500 echocardiographic video data obtained from about 100 patients were trained into this paper.
+In this paper, all echocardiographic data were acquired using GE ultrasound equipment. We are very sorry that data are not shared for privacy purposes. Please put your DICOM format echocardiographic data in XXX.
+More than 1300 echocardiographic video data obtained from about 120 patients were trained into this paper.
 The authors used a GPU (GeForce Titan, 24GB) for training and inference.
-Please use your own dataset to create the arbitrary-time alowmotion echocardiography.
+Please use your own dataset to create the arbitrary-time slow-motion echocardiography.
 
 >>CODEここに書く
 
 ## Prerequisites
 Model implementation and statistical analysis were performed using the Python (version 3.8) with Pytorch (version. 1.8.0) and R (version. 3.4.1), respectively. Model training was conducted using a graphics processing unit (GeForce Titan RTX 24 GB, NVIDIA, Santa Clara, California).
-
-For GPU, run
-```bash
-conda install pytorch=0.4.1 cuda92 torchvision==0.2.0 -c pytorch
-```
 
 This project is implemented for Python 3, and depends on the following packages:
   - NumPy
@@ -57,8 +48,7 @@ This project is implemented for Python 3, and depends on the following packages:
 
 Examples
 --------
-We show examples of our slow-motion echocardiography for nine(XXX) distinct patients below.
-One subject has normal cardiac function, another has a regional wall motion abnormalities.
+We show examples of our slow-motion echocardiography below. One subject has normal cardiac function, another has a slight regional wall motion abnormalities.
 
 | Time speed                                 | Normal                  | Regional wall motion abnormalities                            |
 | ------                                 | ---------------------                  | ----------                             |
@@ -82,12 +72,6 @@ Echonet-Dynamic and its dependencies can be installed by navigating to the clone
 
 Usage
 -----
-# Training
-
-# Evaluation
-## Pretrained model
-You can download the pretrained model trained on our echocardiography dataset
-
 ## Video Converter
 
 You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](video_to_slomo.py). Use the command
