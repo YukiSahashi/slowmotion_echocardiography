@@ -21,7 +21,10 @@ Slow-motion Echocardiography:<br/>Arbitrary time interpolation using echocardiog
 For details, see the accompanying paper (medRxiv),
 
 > [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
-  David Ouyang, Bryan He, Amirata Ghorbani, Neal Yuan, Joseph Ebinger, Curt P. Langlotz, Paul A. Heidenreich, Robert A. Harrington, David H. Liang, Euan A. Ashley, and James Y. Zou. <b>Nature</b>, March 25, 2020. https://doi.org/10.1038/s41586-020-2145-8
+ (Submitted as of May 2023）Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
+
+Authors and affiliations: Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihara PhD, Ayako Sekine, Daichi Watanabe, Takeshi Ishihara MD, Hajime Ichiryu MD, Susumu Endo, Daisuke Fukuoka PhD, Takeshi Hara Ph, Hiroyuki Okura MD PhD, 
+
 
 
 Dataset
@@ -35,21 +38,12 @@ Please use your own dataset to create the arbitrary-time alowmotion echocardiogr
 >>CODEここに書く
 
 ## Prerequisites
-This codebase was developed and tested with pytorch XXXXXX and CUDA XX and Python 3.6.
-
-Install:
-* [PyTorch](https://pytorch.org/get-started/previous-versions/)
+Model implementation and statistical analysis were performed using the Python (version 3.8) with Pytorch (version. 1.8.0) and R (version. 3.4.1), respectively. Model training was conducted using a graphics processing unit (GeForce Titan RTX 24 GB, NVIDIA, Santa Clara, California).
 
 For GPU, run
 ```bash
 conda install pytorch=0.4.1 cuda92 torchvision==0.2.0 -c pytorch
 ```
-
-* [TensorboardX](https://github.com/lanpa/tensorboardX) for training visualization
-* [tensorflow](https://www.tensorflow.org/install/) for tensorboard
-* [matplotlib](https://matplotlib.org/users/installing.html) for training graph in notebook.
-* [tqdm](https://pypi.org/project/tqdm/) for progress bar in [video_to_slomo.py](video_to_slomo.py)
-* [numpy](https://scipy.org/install.html)
 
 This project is implemented for Python 3, and depends on the following packages:
   - NumPy
@@ -57,7 +51,6 @@ This project is implemented for Python 3, and depends on the following packages:
   - Torchvision
   - sklearn
   - tqdm
-  - TensorboardX for training visualization
   - tensorflow for tensorboard
   - etc.
 
