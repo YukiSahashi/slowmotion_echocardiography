@@ -126,47 +126,6 @@ negmean = [x * -1 for x in mean]
 revNormalize = transforms.Normalize(mean=negmean, std=std)
 TP = transforms.Compose([revNormalize, transforms.ToPILImage()])
 
-# Lossの遷移を画像で保存する関数
-def Loss_Draw(train,val,path):
-    fig = plt.figure()
-    ax = fig.add_subplot(1,1,1)
-
-    x = np.arange(len(train))
-    ax.plot(x, train, "-", linewidth=1, label='train')
-    x = np.arange(len(val))
-    ax.plot(x, val, "-", linewidth=1, label='val')
-
-    ax.legend()
-    ax.set_title("Loss Graph")
-    ax.set_xlabel('Epoch')
-    ax.set_ylabel('Loss')
-    ax.set_xlim(0,args.epochs)
-
-    fig.savefig(os.path.join(path,'LossGraph.png'))
-
-# PSNRとSSIMの遷移を画像で保存する関数
-def val_Draw(psnr,ssim,path):
-    for i in range(2): 
-        fig = plt.figure()
-        ax = fig.add_subplot(1,1,1)
-        
-        if i == 0:
-            x = np.arange(len(psnr))
-            ax.plot(x,psnr, "-", linewidth=1)
-            ax.set_title("PSNR Graph")
-            ax.set_xlabel('Epoch')
-            ax.set_ylabel('PSNR')
-            ax.set_xlim(0,args.epochs)
-            fig.savefig(os.path.join(path,'PSNRGraph.png'))
-        else:
-            x = np.arange(len(ssim))
-            ax.plot(x,ssim, "-", linewidth=1)
-            ax.set_title("SSIM Graph")
-            ax.set_xlabel('Epoch')
-            ax.set_ylabel('SSIM')
-            ax.set_xlim(0,args.epochs)
-            fig.savefig(os.path.join(path,'SSIMGraph.png'))
-
 # 学習率を取得する関数
 def get_lr(optimizer):
     for param_group in optimizer.param_groups:
@@ -321,12 +280,6 @@ valPSNR = dict1['valPSNR']
 valSSIM = dict1['valSSIM']
 checkpoint_counter = 0
 
-# エポックごとのLoss,validation Loss,PSNR,SSIM
-loss_epoch = []
-vloss_epoch = []
-psnr_epoch = []
-ssim_epoch = []
-
 ### Main training loop
 for epoch in range(dict1['epoch'] + 1, args.epochs):
     print("Epoch: ", epoch)
@@ -466,20 +419,6 @@ for epoch in range(dict1['epoch'] + 1, args.epochs):
                 }
         torch.save(dict1, args.checkpoint_dir + "/SuperSloMo" + str(checkpoint_counter) + ".ckpt")
         checkpoint_counter += 1
-    
-    # 現エポックにおけるLoss,PSNR,SSIMの平均を計算し、保存
-    loss_epoch.append(iLoss)
-    if len(valLoss[epoch]) != 0:
-        vloss_epoch.append(statistics.mean(valLoss[epoch]))
-    if len(valPSNR[epoch]) != 0:
-        psnr_epoch.append(statistics.mean(valPSNR[epoch]))
-    if len(valSSIM[epoch]) != 0:
-         ssim_epoch.append(statistics.mean(valSSIM[epoch]))
-
-# matplotlibによるエポックごとのLoss,PSNR,SSIMのグラフ生成
-Loss_Draw(loss_epoch, vloss_epoch, args.log_dir)
-val_Draw(psnr_epoch, ssim_epoch, args.log_dir)
-
 
 dt_now = datetime.datetime.now()
 print(dt_now)
