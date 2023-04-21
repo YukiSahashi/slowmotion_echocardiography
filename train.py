@@ -30,7 +30,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--dataset_root", type=str, required=True, help='path to dataset folder containing train-test-validation folders') #trainとtestとvalidationが入っているフォルダのパス
 parser.add_argument("--checkpoint_dir", type=str, required=True, help='path to folder for saving checkpoints') #学習したパラメータを保存するフォルダのパス
 parser.add_argument("--checkpoint", type=str, help='path of checkpoint for pretrained model') 
-parser.add_argument("--log_dir", type=str, default='log', help='path of log for pretrained model') #学習時のLossやPSNR,SSIMの情報を保存するフォルダのパス
+parser.add_argument("--log_dir", type=str, default='log', help='path of log for train model') #学習時のLossやPSNR,SSIMの情報を保存するフォルダのパス
 parser.add_argument("--train_continue", type=bool, default=False, help='If resuming from checkpoint, set to True and set `checkpoint` path. Default: False.')
 parser.add_argument("--width", type=int, required=True, help='width of input image for train')
 parser.add_argument("--height", type=int, required=True, help='height of input image for train')
@@ -42,9 +42,9 @@ parser.add_argument("--milestones", type=list, default=[100, 150], help='Set to 
 parser.add_argument("--progress_iter", type=int, default=100, help='frequency of reporting progress and validation. N: after every N iterations. Default: 100.') # validationを行う学習回数(学習回数 = trainのデータ数 / 学習のバッチサイズ)
 parser.add_argument("--checkpoint_epoch", type=int, default=5, help='checkpoint saving frequency. N: after every N epochs. Each checkpoint is roughly of size 151 MB.Default: 5.') #パラメータを保存するエポック
 # 画像の正規化に用いるパラメータ
-parser.add_argument("--Red", type=float, required=True, help='Training Channel Wise Mean Red')
-parser.add_argument("--Green", type=float, required=True, help='Training Channel Wise Mean Green')
-parser.add_argument("--Blue", type=float, required=True, help='Training Channel Wise Mean Blue')
+parser.add_argument("--Red", type=float, default=0.186, help='Training Channel Wise Mean Red')
+parser.add_argument("--Green", type=float, default=0.184, help='Training Channel Wise Mean Green')
+parser.add_argument("--Blue", type=float, default=0.206, help='Training Channel Wise Mean Blue')
 
 args = parser.parse_args()
 
