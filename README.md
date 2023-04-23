@@ -30,12 +30,15 @@ Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihar
 
 Dataset
 -------
-In this paper, all echocardiographic data were acquired using GE ultrasound equipment. We are very sorry that data are not shared for privacy purposes. Please put your DICOM format echocardiographic data in XXX.
+In this paper, all echocardiographic data were acquired using GE ultrasound equipment. 
+We are very sorry that data are not shared for privacy purposes. 
+<br/>
+Please put your DICOM format echocardiographic data in XXX.
 More than 1300 echocardiographic video data obtained from about 120 patients were trained into this paper.
 The authors used a GPU (GeForce Titan, 24GB) for training and inference.
 Please use your own dataset to create the arbitrary-time slow-motion echocardiography.
 
->>CODEここに書く
+
 
 ## Prerequisites
 Model implementation and statistical analysis were performed using the Python (version 3.8) with Pytorch (version. 1.8.0) and R (version. 3.4.1), respectively. Model training was conducted using a graphics processing unit (GeForce Titan RTX 24 GB, NVIDIA, Santa Clara, California).
