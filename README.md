@@ -87,8 +87,7 @@ One subject has normal cardiac function, another has a slight regional wall moti
 
 Usage
 -----
-## Step 1
-- Dataset Preparation
+## Step 1　Dataset Preparation
 ```bash
 python create_train_dataset.py 
 
@@ -100,8 +99,7 @@ python create_train_dataset.py
 
 ```
 
-## Step 2
-- Training
+## Step 2　Training
 ```bash
 python train.py
 
