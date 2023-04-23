@@ -21,7 +21,8 @@ For details, see the accompanying paper.<br/>
 
  (Submitted as of May 2023）<br/>
  Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
-> [**XXXXXX**](https://XXXXXXXXXXXX)<br/>
+> [**XXXXXX**](https://XXXXXXXXXXXX)　
+PDFをここにおく<br/>
 
 
 Authors: <br/>
@@ -60,26 +61,15 @@ We show examples of our slow-motion echocardiography below. One subject has norm
 | 0.25x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
 | 0.125x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
 
-Installation
-------------
-
-First, clone this repository and enter the directory by running:
-
-    git clone https://github.com/echonet/dynamic.git
-    cd dynamic
-
-
-Echonet-Dynamic and its dependencies can be installed by navigating to the cloned directory and running
-
-    pip install --user .
 
 Usage
 -----
 ## Video Converter
-
-You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](video_to_slomo.py). Use the command
+First, clone this repository, then please do this.
+You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](video_to_slomo_SF.py). Use the command
 
 ```bash
+
 # Windows
 python video_to_slomo.py --ffmpeg path\to\folder\containing\ffmpeg --video path\to\video.mp4 --sf N --checkpoint path\to\checkpoint.ckpt --fps M --output path\to\output.mkv
 
