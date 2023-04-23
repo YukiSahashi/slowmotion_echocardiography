@@ -69,7 +69,7 @@ Usage
 -----
 ## Video Converter
 First, clone this repository, then please do this.
-You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](video_to_slomo_SF.py). Use the command
+You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](image_to_slomo_SF.py). Use the command
 
 ```bash
 
