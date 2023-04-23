@@ -56,7 +56,7 @@ This project is implemented for Python 3, and depends on the following packages:
 Examples
 --------
 We show examples of our slow-motion echocardiography below. 
-(please see XXX (not gif version))
+(please see ![Not gif version](slowmotion_echocardiography/docs/Project_supplemental_figure(2).mp4))
 
 - Original (High heart rate due to exercise)　　　　　　　　　　　　　　　
 ![original](https://user-images.githubusercontent.com/58348086/233840538-467026dc-2241-4bbb-bf3b-a291b2cdf67f.gif)
@@ -72,11 +72,11 @@ We show examples of our slow-motion echocardiography below.
 
 One subject has normal cardiac function, another has a slight regional wall motion abnormalities.
 
- -example1 (Without Regional Wall motion abnormalities) <br/> 
+ - example1 (Without Regional Wall motion abnormalities) <br/> 
  video (Original Stress Echocardiography(Top)  <br/>AI-based 0.25x Slow motion echocardiography (same fps and 4-times numbers of frames) (Left Bottom)  <br/> Manual 0.25x video (0.25 fps and same frame numbers as original)(Right bottom))
 ![video1](https://user-images.githubusercontent.com/58348086/233838418-a0cf7150-7b70-4ec4-be4c-3c285e1faea6.gif)
 
- -example2 (With Regional Wall motion abnormalities) <br/> 
+ - example2 (With Regional Wall motion abnormalities) <br/> 
 video (Original Stress Echocardiography(Top)  <br/>AI-based 0.25x Slow motion echocardiography (same fps and 4-times numbers of frames) (Left Bottom)  <br/> Manual 0.25x video (0.25 fps and same frame numbers as original)(Right bottom))
 
 ![video2](https://user-images.githubusercontent.com/58348086/233838476-a69f2b30-77e6-4ee8-a68f-8670f1ba1f93.gif)
