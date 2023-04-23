@@ -85,8 +85,10 @@ One subject has normal cardiac function, another has a slight regional wall moti
 
 
 
-Usage
+Usage Sample
 -----
+Note that the directory, image size should be modified based on each user's setting.
+
 ## Step 1　Dataset Preparation
 ```bash
 python create_train_dataset.py 
