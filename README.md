@@ -83,3 +83,8 @@ python video_to_slomo.py --ffmpeg path\to\folder\containing\ffmpeg --video path\
 # Linux
 python video_to_slomo.py --video path\to\video.mp4 --sf N --checkpoint path\to\checkpoint.ckpt --fps M --output path\to\output.mkv
 ```
+
+![video1](https://user-images.githubusercontent.com/58348086/233838418-a0cf7150-7b70-4ec4-be4c-3c285e1faea6.gif)
+
+
+
