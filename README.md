@@ -58,7 +58,7 @@ Examples
 We show examples of our slow-motion echocardiography below. 
 (please see XXX (not gif version))
 
-- Original (High heart rate due to exercise)
+- Original (High heart rate due to exercise)　　　　　　　　　　　　　　　
 ![original](https://user-images.githubusercontent.com/58348086/233840538-467026dc-2241-4bbb-bf3b-a291b2cdf67f.gif)
 
 - 0.25x Slow motion echocardiography (same fps and 4x numbers of frames)
