@@ -57,16 +57,16 @@ Examples
 --------
 We show examples of our slow-motion echocardiography below. One subject has normal cardiac function, another has a slight regional wall motion abnormalities.
 
-![x](slowmotion_echocardiography/docs/Supplemental Figure.mp4)
+ -example1 (Without Regional Wall motion abnormalities) <br/> 
+ video (Original Stress Echocardiography(Top)  <br/>AI-based 0.25x Slow motion echocardiography (same fps and 4-times numbers of frames) (Left Bottom)  <br/> Manual 0.25x video (0.25 fps and same frame numbers as original)(Right bottom))
+![video1](https://user-images.githubusercontent.com/58348086/233838418-a0cf7150-7b70-4ec4-be4c-3c285e1faea6.gif)
+
+ -example2 (With Regional Wall motion abnormalities) <br/> 
+video (Original Stress Echocardiography(Top)  <br/>AI-based 0.25x Slow motion echocardiography (same fps and 4-times numbers of frames) (Left Bottom)  <br/> Manual 0.25x video (0.25 fps and same frame numbers as original)(Right bottom))
+
+![video2](https://user-images.githubusercontent.com/58348086/233838476-a69f2b30-77e6-4ee8-a68f-8670f1ba1f93.gif)
 
 
-
-| Time speed                                 | Normal                  | Regional wall motion abnormalities                            |
-| ------                                 | ---------------------                  | ----------                             |
-| Original | ![](docs/media/0X129133A90A61A59D.gif) | ![](docs/media/0X132C1E8DBB715D1D.gif) |
-| 0.5x | ![](docs/media/0X13CE2039E2D706A.gif ) | ![](docs/media/0X18BA5512BE5D6FFA.gif) |
-| 0.25x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
-| 0.125x | ![](docs/media/0X16FC9AA0AD5D8136.gif) | ![](docs/media/0X1E12EEE43FD913E5.gif) |
 
 
 Usage
@@ -83,8 +83,5 @@ python video_to_slomo.py --ffmpeg path\to\folder\containing\ffmpeg --video path\
 # Linux
 python video_to_slomo.py --video path\to\video.mp4 --sf N --checkpoint path\to\checkpoint.ckpt --fps M --output path\to\output.mkv
 ```
-
-![video1](https://user-images.githubusercontent.com/58348086/233838418-a0cf7150-7b70-4ec4-be4c-3c285e1faea6.gif)
-
 
 
