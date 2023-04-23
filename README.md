@@ -57,6 +57,10 @@ Examples
 --------
 We show examples of our slow-motion echocardiography below. One subject has normal cardiac function, another has a slight regional wall motion abnormalities.
 
+![](docs/Supplemental Figure.mp4)
+
+
+
 | Time speed                                 | Normal                  | Regional wall motion abnormalities                            |
 | ------                                 | ---------------------                  | ----------                             |
 | Original | ![](docs/media/0X129133A90A61A59D.gif) | ![](docs/media/0X132C1E8DBB715D1D.gif) |
