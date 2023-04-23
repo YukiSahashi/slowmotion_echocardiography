@@ -33,7 +33,7 @@ Dataset
 In this paper, all echocardiographic data were acquired using GE ultrasound equipment. 
 We are very sorry that data are not shared for privacy purposes. 
 <br/>
-Please put your DICOM format echocardiographic data in XXX.
+
 More than 1300 echocardiographic video data obtained from about 120 patients were trained into this paper.
 The authors used a GPU (GeForce Titan, 24GB) for training and inference.
 Please use your own dataset to create the arbitrary-time slow-motion echocardiography.
@@ -71,6 +71,42 @@ video (Original Stress Echocardiography(Top)  <br/>AI-based 0.25x Slow motion ec
 
 Usage
 -----
+## Step 1
+- Dataset Preparation
+```bash
+python create_train_dataset.py 
+
+--trainDicoms_folder path/to/folder/containig/dicoms/for/train # Dicom dataset for training
+--testDicoms_folder path/to/folder/containig/dicoms/for/test # Dicom dataset for test
+--dataset_folder path/to/output/dataset/folder 
+--width resize image width #specify dataset image size :defalut 640
+--height resize image height
+
+```
+
+## Step 2
+- Training
+```bash
+python train.py
+
+--dataset_root path/to/dataset/folder/containing/train-test-validation/folders #Dataset path for train-test-validation dataset
+--checkpoint_dir path/to/folder/for/saving/checkpoints 
+--log_dir path/to/log/for/loss-valLoss-PSNR-SSIM/using/tensorboard/ 
+--width image width #specify dataset image size :defalut 640
+--height image height
+```
+
+## Step 3 generating slowmotion echocardiography
+```bash
+python image_to_slomo_SF.py
+--ffmpeg_dir path/to/ffmpeg.exe #ffmpeg:https://ffmpeg.org/  Enter apps in this directory
+--extractDir path/to/extract/folder #SuperSloMoを適用したい連番画像(連続する画像の集合)へのパス
+--sf  #the number of increase in frame per second (ex: 4, 8, 12)
+--slomo_fps #SuperSloMo適用後の動画のフレームレート ああああああああああああああ
+--outputDir path/to/output/folder #Path for output
+
+```
+
 ## Video Converter
 First, clone this repository, then please do this.
 You can convert any echocardiography video to a slomo or high fps video using [video_to_slomo.py](image_to_slomo_SF.py). Use the command
