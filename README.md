@@ -19,11 +19,11 @@ Slow-motion Echocardiography:<br/>Arbitrary time interpolation using echocardiog
 ------------------------------------------------------------------------------
 For details, see the accompanying paper.<br/>
 
- (Submitted as of May 2023）<br/>
+ (Accepted as of May 2023）<br/>
  Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities
-> [**XXXXXX**](https://XXXXXXXXXXXX)　
-PDFをここにおく<br/>
-
+> [**Development of artificial intelligence-based slow-motion echocardiography and clinical usefulness for evaluating regional wall motion abnormalities**](https://pubmed.ncbi.nlm.nih.gov/37940734/)　
+<br/>
+Int J Cardiovasc Imaging. 2024 Feb;40(2):385-395
 
 Authors: <br/>
 Yuki Sahashi MD*, MSc, Takeshita Ryo*, Takatomo Watanabe MD, PhD, Takuma Ishihara PhD, Ayako Sekine, Daichi Watanabe, Takeshi Ishihara MD, Hajime Ichiryu MD, Susumu Endo, Daisuke Fukuoka PhD, Takeshi Hara Ph, Hiroyuki Okura MD PhD, 
@@ -116,13 +116,13 @@ python train.py
 
 Please note:
 sf indicates how many times the image is to be increased. (e.g. 2,4,8,12)
-slomo-fps specifies the FPS after slow motion is applied ああああああああ
+slomo-fps specifies the FPS after slow motion is applied 
 ```bash
 python image_to_slomo_SF.py
 --ffmpeg_dir path/to/ffmpeg.exe #ffmpeg:https://ffmpeg.org/  Enter apps in this directory
---extractDir path/to/extract/folder #SuperSloMoを適用したい連番画像(連続する画像の集合)へのパス
+--extractDir path/to/extract/folder
 --sf  #the number of increase in frame per second (ex: 4, 8, 12)
---slomo_fps #frame per seconds after generating Slow Motion video　ああああああああああ
+--slomo_fps #frame per seconds after generating Slow Motion video　
 --outputDir path/to/output/folder #Path for output
 
 ```
